@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Lista de contatos</title>
+  </head>
+  <body>
+    <secction class="mainBox">
+      <div class="box-app">
+        <div class="box-app__modal">
+          <input type="text" />
+        </div>
+        <div class="box-app__add-contact openmenu">
+          <div class="box-p">
+            <div class="menu" id="menu">
+              <div>
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+              </div>
+            </div>
+            <p class="box-p__text">Criar contato</p>
+
+            <button class="btn-save" id="btn" type="submit" value="submit">
+              Salvar
+            </button>
+          </div>
+          <form class="box-app__form" id="form1">
+            <div class="one">
+              <input
+                type="text"
+                class="name input-contact"
+                id="name"
+                placeholder="Nome"
+                required
+              />
+              <label for="name">Nome</label>
+            </div>
+            <div class="two">
+              <input
+                type="text"
+                class="sname input-contact"
+                id="sname"
+                placeholder="Segundo nome"
+              />
+              <label for="segundonome">Segundo nome</label>
+            </div>
+            <div class="two">
+              <input
+                type="number"
+                class="number input-contact"
+                pattern="\d*"
+                id="number"
+                placeholder="Número"
+                required
+              />
+              <label for="number">Número</label>
+            </div>
+            <div class="two">
+              <input
+                type="email"
+                class="email input-contact"
+                id="email"
+                placeholder="E-mail"
+              />
+              <label for="email">E-mail</label>
+            </div>
+            <input type="submit" id="btn1" style="display: none" />
+          </form>
+        </div>
+        <div class="box-app__informations">
+          <div class="box-main">
+            <div class="menu" id="menu2">
+              <i class="bx bx-left-arrow-alt"></i>
+            </div>
+            <div class="box-icon">
+              <i
+                class="bx bxs-pencil"
+                id="icon-pencil"
+                onclick="pencilFunction()"
+              ></i>
+              <i class="bx bx-dots-vertical-rounded dots" id="icon-dots"></i>
+            </div>
+          </div>
+          <div class="box-main__name">A</div>
+          <div class="box-main__option">
+            <div class="box-main__option-icons">
+              <i class="bx bxs-phone"></i>
+              <p class="box-main__option-p">Chamada</p>
+            </div>
+            <div class="box-main__option-icons">
+              <i class="bx bxs-message-detail"></i>
+              <p class="box-main__option-p">Sms</p>
+            </div>
+            <div class="box-main__option-icons">
+              <i class="bx bxs-video-plus"></i>
+              <p class="box-main__option-p">Vídeo</p>
+            </div>
+          </div>
+          <div class="box-main__contact">
+            <p class="box-main__contact-p">Informações do contato</p>
+            <div class="box-main__contact-icons">
+              <div class="box-main__modals">
+                <i class="bx bxs-phone"></i>
+                <p class="box-main__modals-p number-info">398198319</p>
+              </div>
+              <div class="box-main__modals">
+                <i class="bx bxs-envelope"></i>
+                <p class="box-main__modals-p email-info">ammdmdmdmdm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-app__contacts"></div>
+        <div class="box-app__button-add">+</div>
+        <div class="second-menu__informations">
+          <ul class="nav">
+            <li class="nav__li" onclick="deleteContact()">Excluir contato</li>
+          </ul>
+        </div>
+      </div>
+    </secction>
+    <script src="/index.js"></script>
+  </body>
+</html>
